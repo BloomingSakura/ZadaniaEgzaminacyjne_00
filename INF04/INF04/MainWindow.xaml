@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:INF04"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="400">
     <Grid>
-
+        <StackPanel HorizontalAlignment="Center" Margin="10">
+            <Label FontSize="20" FontWeight="DemiBold">Wzory aplikacji desktopowych</Label>
+            <Button Margin="20"> Styczeń 2024 </Button>
+            <Button Margin="20"> Styczeń 2023 </Button>
+            <Button Margin="20"> Czerwiec 2023</Button>
+            <Button Margin="20"> Egzamin </Button>
+        </StackPanel>
     </Grid>
 </Window>
