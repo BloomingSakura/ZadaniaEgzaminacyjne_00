@@ -10,7 +10,7 @@
         <StackPanel>
             <StackPanel HorizontalAlignment="Right"
                         VerticalAlignment="Top">
-                <Button Margin="5"> Wróć</Button>
+                <Button Click="Button_Click" Margin="5"> Wróć</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

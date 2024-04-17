@@ -9,6 +9,6 @@ namespace INF04
     /// </summary>
     public partial class App : Application
     {
+      
     }
-
 }

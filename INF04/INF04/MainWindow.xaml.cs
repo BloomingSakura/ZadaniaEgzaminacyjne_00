@@ -27,6 +27,7 @@ namespace INF04
             styczen2024.Show();
 
             this.Close();
+            
         }
     }
 }
