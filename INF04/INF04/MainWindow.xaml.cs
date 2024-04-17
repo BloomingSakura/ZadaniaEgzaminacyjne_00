@@ -20,5 +20,13 @@ namespace INF04
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {      
+            Styczen2024 styczen2024 = new Styczen2024();
+            styczen2024.Show();
+
+            this.Close();
+        }
     }
 }
