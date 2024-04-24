@@ -5,13 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:INF04"
         mc:Ignorable="d"
-        Title="Styczen2024" Height="450" Width="800">
+        Title="Czerwiec 2023" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <StackPanel HorizontalAlignment="Right"
-                        VerticalAlignment="Top">
-                <Button Click="Button_Click" Margin="5"> Wróć</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.5*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Right"
+                    VerticalAlignment="Top">
+            <Button Click="Button_Click" Margin="5">Wróć</Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <GroupBox Header="Rodzaj przesyłki" Width="200">
+                <StackPanel>
+                    <RadioButton Margin="10"> Pocztówka</RadioButton>
+                    <RadioButton Margin="10"> List</RadioButton>
+                    <RadioButton Margin="10"> Paczka</RadioButton>
+                </StackPanel>
+            </GroupBox>
+            <Button Margin="10"> Sprawdź cenę:</Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Visibility="Collapsed" Width="100" Source="C:\Users\informatyka\Desktop\3P\Github\ZadaniaEgzaminacyjne_00\INF04\INF04\paczka.png"></Image>
+                <Image Visibility="Collapsed" Width="100" Source="C:\Users\informatyka\Desktop\3P\Github\ZadaniaEgzaminacyjne_00\INF04\INF04\pocztowka.png"></Image>
+                <Image Visibility="Visible" Width="100" Source="C:\Users\informatyka\Desktop\3P\Github\ZadaniaEgzaminacyjne_00\INF04\INF04\list.png"></Image>
+                <Label Content="Cena:" FontSize="18" FontWeight="Bold"></Label>
             </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <GroupBox Header="Dane adresowe">
+                <StackPanel>
+                    <Label>Ulica z numerem:</Label>
+                    <TextBox Width="200"></TextBox>
+                    <Label>Kod pocztowy:</Label>
+                    <TextBox Width="80" HorizontalAlignment="Left"></TextBox>
+                    <Label>Miasto:</Label>
+                    <TextBox  Width="200"></TextBox>
+                </StackPanel>
+            </GroupBox>
         </StackPanel>
     </Grid>
 </Window>
