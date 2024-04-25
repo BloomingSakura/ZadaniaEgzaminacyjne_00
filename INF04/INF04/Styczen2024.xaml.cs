@@ -30,5 +30,52 @@ namespace INF04
            mainWindow.Show();
            this.Close();  
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if(paczka.IsChecked == true)
+            {
+                paczka_zdj.Visibility = Visibility.Visible;
+                list_zdj.Visibility = Visibility.Collapsed;
+                pocztowka_zdj.Visibility = Visibility.Collapsed;
+                cena.Content = "Cena: 10 zł";
+            }
+            else if(list.IsChecked == true)
+            {
+                paczka_zdj.Visibility = Visibility.Collapsed;
+                list_zdj.Visibility = Visibility.Visible;
+                pocztowka_zdj.Visibility = Visibility.Collapsed;
+                cena.Content = "Cena: 1.5 zł";
+            }
+            else
+            {
+                paczka_zdj.Visibility = Visibility.Collapsed;
+                list_zdj.Visibility = Visibility.Collapsed;
+                pocztowka_zdj.Visibility = Visibility.Visible;
+                cena.Content = "Cena: 1 zł";
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            int kod;
+            bool prawidlowy_kod = int.TryParse(kod_pocztowy.Text, out kod);
+             if(prawidlowy_kod == true)
+             {
+                if(kod_pocztowy.Text.Length == 5)
+                {
+                    MessageBox.Show($" Dane adresowe: {ulica.Text}, {miasto.Text}, {kod}");
+                }
+                else
+                {
+                    MessageBox.Show("Kod pocztowy powinien składać się z 5 cyfr");
+                }
+             }
+            else
+            {
+                MessageBox.Show("Kod pocztowy powinien składać się z samych cyfr");
+            }
+
+        }
     }
 }

@@ -18,31 +18,32 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <GroupBox Header="Rodzaj przesyłki" Width="200">
                 <StackPanel>
-                    <RadioButton Margin="10"> Pocztówka</RadioButton>
-                    <RadioButton Margin="10"> List</RadioButton>
-                    <RadioButton Margin="10"> Paczka</RadioButton>
+                    <RadioButton x:Name="pocztowka" Margin="10"> Pocztówka</RadioButton>
+                    <RadioButton x:Name="list" Margin="10"> List</RadioButton>
+                    <RadioButton x:Name="paczka" Margin="10"> Paczka</RadioButton>
                 </StackPanel>
             </GroupBox>
-            <Button Margin="10"> Sprawdź cenę:</Button>
+            <Button Click="Button_Click_1" Margin="10"> Sprawdź cenę:</Button>
             <StackPanel Orientation="Horizontal">
-                <Image Visibility="Collapsed" Width="100" Source="C:\Users\informatyka\Desktop\3P\Github\ZadaniaEgzaminacyjne_00\INF04\INF04\paczka.png"></Image>
-                <Image Visibility="Collapsed" Width="100" Source="C:\Users\informatyka\Desktop\3P\Github\ZadaniaEgzaminacyjne_00\INF04\INF04\pocztowka.png"></Image>
-                <Image Visibility="Visible" Width="100" Source="C:\Users\informatyka\Desktop\3P\Github\ZadaniaEgzaminacyjne_00\INF04\INF04\list.png"></Image>
-                <Label Content="Cena:" FontSize="18" FontWeight="Bold"></Label>
+                <Image x:Name="paczka_zdj" Visibility="Collapsed" Width="100" Source="C:\Users\informatyka\Desktop\3P\Github\ZadaniaEgzaminacyjne_00\INF04\INF04\paczka.png"></Image>
+                <Image x:Name="pocztowka_zdj" Visibility="Collapsed" Width="100" Source="C:\Users\informatyka\Desktop\3P\Github\ZadaniaEgzaminacyjne_00\INF04\INF04\pocztowka.png"></Image>
+                <Image x:Name="list_zdj" Visibility="Visible" Width="100" Source="C:\Users\informatyka\Desktop\3P\Github\ZadaniaEgzaminacyjne_00\INF04\INF04\list.png"></Image>
+                <Label Name="cena" Content="Cena:" FontSize="18" FontWeight="Bold"></Label>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <GroupBox Header="Dane adresowe">
+            <GroupBox Header="Dane adresowe" Padding="10" Width="300">
                 <StackPanel>
                     <Label>Ulica z numerem:</Label>
-                    <TextBox Width="200"></TextBox>
+                    <TextBox Name="ulica" Width="200" HorizontalAlignment="Left"></TextBox>
                     <Label>Kod pocztowy:</Label>
-                    <TextBox Width="80" HorizontalAlignment="Left"></TextBox>
+                    <TextBox Name="kod_pocztowy" Width="80" HorizontalAlignment="Left"></TextBox>
                     <Label>Miasto:</Label>
-                    <TextBox  Width="200"></TextBox>
+                    <TextBox Name="miasto"  Width="200" HorizontalAlignment="Left"></TextBox>
                 </StackPanel>
             </GroupBox>
         </StackPanel>
+        <Button Click="Button_Click_2" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Margin="20"> Zatwierdź</Button>
     </Grid>
 </Window>
